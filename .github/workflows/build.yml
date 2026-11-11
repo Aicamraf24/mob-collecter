@@ -13,7 +13,8 @@ jobs:
         with:
           gradle-version: current
       - run: gradle build
+        working-directory: monster_collector
       - uses: actions/upload-artifact@v4
         with:
-          name: el-vacio-profundo
-          path: build/libs/*.jar
+          name: monster-collector
+          path: monster_collector/build/libs/*.jar
