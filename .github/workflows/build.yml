@@ -27,7 +27,7 @@ jobs:
       - name: Comprobar el catálogo
         working-directory: monster_collector
         run: |
-          javac -d build/catalog-check $(find src/main/java/com/monstercollector/domain -name "*.java") src/test/java/com/monstercollector/CatalogCheck.java
+          javac -encoding UTF-8 -d build/catalog-check $(find src/main/java/com/monstercollector/domain src/main/java/com/monstercollector/rig -name "*.java") src/test/java/com/monstercollector/CatalogCheck.java
           java -cp build/catalog-check com.monstercollector.CatalogCheck
 
       - uses: actions/upload-artifact@v4
